@@ -1,5 +1,5 @@
 # Exercicios de Algoritmos - Java
-**Lista de exercícios de ALgoritmos**
+**Lista de exercícios de Algoritmos**
 ---
 **Desenvolvido por:** Anderson Luis
 

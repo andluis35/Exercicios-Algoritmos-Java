@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * @author Anderson Luis
  */
+
 public class Exercicio006 {
 
     public static void main(String[] args) {

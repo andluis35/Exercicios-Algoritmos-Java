@@ -1,4 +1,3 @@
-
 package exercicio009;
 
 import java.util.Scanner;

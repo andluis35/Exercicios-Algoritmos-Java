@@ -1,7 +1,7 @@
 package exercicio043;
 
 /**
- * @author Anderson Oliver
+ * @author Anderson Luis
  */
 
 public class Exercicio043 {

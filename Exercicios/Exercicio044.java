@@ -24,41 +24,6 @@ public class Exercicio044 {
     
     public static String makeCount(int firstNumber, int lastNumber, int increment) {
         String count = "";
-        
-        if(isCountdown(firstNumber, lastNumber, increment)) {
-            count += makeCountdown(firstNumber, lastNumber, increment);
-        }
-        
-        if(isCountup(firstNumber, lastNumber, increment)) {
-            count += makeCountup(firstNumber, lastNumber, increment);
-        }
-        
-        return count;
-    }
-    
-    public static boolean isCountdown(int firstNumber, int lastNumber, int increment) {
-        return (firstNumber > lastNumber) && (increment < 0);
-    }
-    
-    public static boolean isCountup(int firstNumber, int lastNumber, int increment) {
-        return (firstNumber < lastNumber) && (increment > 0);
-    }
-    
-    public static String makeCountdown(int firstNumber, int lastNumber, int increment) {
-        String count = "";
-        int i = firstNumber;
-        
-        while(i >= lastNumber) {
-            count = count + i + " ";
-            i += increment;  
-        }
-        
-        count += "Acabou!";
-        return count;
-    }
-    
-    public static String makeCountup(int firstNumber, int lastNumber, int increment) {
-        String count = "";
         int i = firstNumber;
         
         while(i <= lastNumber) {
@@ -69,5 +34,5 @@ public class Exercicio044 {
         count += "Acabou!";
         return count;
     }
-    
+        
 }

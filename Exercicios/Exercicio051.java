@@ -37,7 +37,7 @@ public class Exercicio051 {
             i++;
         }
         
-        System.out.println("-------------------------");
+        System.out.println("---------------------------");
         System.out.println("MAIOR VALOR: R$" + biggest);
         System.out.println("MENOR VALOR: R$" + lowest);
     }

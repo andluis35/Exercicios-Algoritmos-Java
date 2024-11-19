@@ -16,6 +16,8 @@ public class Exercicio057 {
         byte gender;
         byte choice;
         int i = 1;
+        final int MALE = 1;
+        final int FEMALE = 2;
         
         while(true) {
             System.out.println("==========================================");
@@ -27,11 +29,11 @@ public class Exercicio057 {
             System.out.print("Digite o gênero do " + i + "º funcionário:\n[1] Masculino\n[2] Feminino\nR: ");
             gender = keyboard.nextByte();
             
-            if(gender == 1) {
+            if(gender == MALE) {
                 menSalaries += currentSalary;
             }
             
-            if(gender == 2) {
+            if(gender == FEMALE) {
                 womenSalaries += currentSalary;
             }
             

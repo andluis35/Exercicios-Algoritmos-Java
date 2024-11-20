@@ -13,11 +13,11 @@ public class Exercicio057 {
         float currentSalary;
         float menSalaries = 0.0f;
         float womenSalaries = 0.0f;
+        final byte MALE = 1;
+        final byte FEMALE = 2;
         byte gender;
         byte choice;
-        int i = 1;
-        final int MALE = 1;
-        final int FEMALE = 2;
+        int i = 1;  
         
         while(true) {
             System.out.println("==========================================");

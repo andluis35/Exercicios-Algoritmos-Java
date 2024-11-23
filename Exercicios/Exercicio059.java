@@ -19,9 +19,8 @@ public class Exercicio059 {
         final byte FEMALE = 2;
         int i = 1;
         int numberOfMen = 0;
+        int numberOfWomen = 0;
         int sumOfMenAges = 0;
-        boolean isFirstTime = true;
-        boolean isFirstTimeFemale = true;
         float menAgeAverage;
         
         while(true) {
@@ -34,15 +33,7 @@ public class Exercicio059 {
             System.out.print("Digite o gênero da " + i + "ª pessoa:\n[1] Masculino\n[2] Feminino\nR: ");
             gender = keyboard.nextByte();
             
-            if(isFirstTime) {
-                biggestAge = currentAge;
-                isFirstTime = false;
-            }
-            else {
-                if(currentAge > biggestAge) {
-                    biggestAge = currentAge;
-                }
-            }
+            biggestAge = setBiggestAge(currentAge, biggestAge, i);
             
             if(gender == MALE) {
                 numberOfMen++;
@@ -50,15 +41,8 @@ public class Exercicio059 {
             }
             
             if(gender == FEMALE) {
-                if(isFirstTimeFemale) {
-                    ageOfYoungestWoman = currentAge;
-                    isFirstTimeFemale = false;
-                }
-                else {
-                    if(currentAge < ageOfYoungestWoman) {
-                        ageOfYoungestWoman = currentAge;
-                    }
-                }
+                ageOfYoungestWoman = setMinorAge(currentAge, ageOfYoungestWoman, numberOfWomen);
+                numberOfWomen++;
             }
             
             System.out.println("----------");
@@ -80,6 +64,38 @@ public class Exercicio059 {
         System.out.println("HOMENS CADASTRADOS: " + numberOfMen);
         System.out.println("IDADE DA MULHER MAIS JOVEM: " + ageOfYoungestWoman);
         System.out.println("MÉDIA DE IDADE DOS HOMENS: " + menAgeAverage);
+    }
+    
+    public static byte setBiggestAge(byte currentAge, byte biggestAge, int i) {
+        if(isFirstTime(i)) {
+            biggestAge = currentAge;
+        }
+        else {
+            if(currentAge > biggestAge) {
+                biggestAge = currentAge;
+            }
+        }
+        return biggestAge;
+    }
+    
+    public static byte setMinorAge(byte currentAge, byte ageOfYoungestWoman, int numberOfWomen) {
+        if(isHerTheFirstWoman(numberOfWomen)) {
+            ageOfYoungestWoman = currentAge;
+        }
+        else {
+            if(currentAge < ageOfYoungestWoman) {
+                ageOfYoungestWoman = currentAge;
+            }
+        }
+        return ageOfYoungestWoman;
+    }
+    
+    public static boolean isFirstTime(int i) {
+        return i == 1;
+    }
+    
+    public static boolean isHerTheFirstWoman(int numberOfWomen) {
+        return numberOfWomen == 0;
     }
     
 }

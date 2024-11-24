@@ -10,18 +10,17 @@ public class Exercicio059 {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
+        final byte MALE = 1;
+        final byte FEMALE = 2;
         byte currentAge;
         byte biggestAge = 0;
         byte ageOfYoungestWoman = 0;
         byte gender;
         byte choice;
-        final byte MALE = 1;
-        final byte FEMALE = 2;
         int i = 1;
         int numberOfMen = 0;
         int numberOfWomen = 0;
         int sumOfMenAges = 0;
-        float menAgeAverage;
         
         while(true) {
             System.out.println("==========================================");
@@ -57,13 +56,11 @@ public class Exercicio059 {
             i++;
         }
         
-        menAgeAverage = sumOfMenAges / numberOfMen;
-        
         System.out.println("--------------------------------------");
         System.out.println("MAIOR IDADE LIDA: " + biggestAge);
         System.out.println("HOMENS CADASTRADOS: " + numberOfMen);
         System.out.println("IDADE DA MULHER MAIS JOVEM: " + ageOfYoungestWoman);
-        System.out.println("MÉDIA DE IDADE DOS HOMENS: " + menAgeAverage);
+        System.out.println("MÉDIA DE IDADE DOS HOMENS: " + (sumOfMenAges / numberOfMen));
     }
     
     public static byte setBiggestAge(byte currentAge, byte biggestAge, int i) {

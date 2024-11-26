@@ -91,6 +91,7 @@ public class Exercicio060 {
             i++;
         }
         
+        System.out.println("------------------------------");
         System.out.println("PESSOA MAIS VELHA: " + oldestPerson);
         System.out.println("MULHER MAIS JOVEM: " + youngestWoman);
         System.out.println("MÉDIA DE IDADE: " + (sumOfAges / numberOfPeople));

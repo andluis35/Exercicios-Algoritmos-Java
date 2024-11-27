@@ -42,7 +42,7 @@ public class Exercicio060 {
             System.out.print("Digite o gênero de " + currentName + ":\n[1] Masculino\n[2] Feminino\nR: ");
             gender = keyboard.nextByte();
             
-            if(i == 1) {
+            if(isFirstTime(i)) {
                 biggestAge = currentAge;
                 oldestPerson = currentName;
             }
@@ -60,7 +60,7 @@ public class Exercicio060 {
             }
             
             if(gender == FEMALE) {
-                if(numberOfWomen == 0) {
+                if(isHerTheFirstWoman(numberOfWomen)) {
                     ageOfYoungestWoman = currentAge;
                     youngestWoman = currentName;
                 }
@@ -100,5 +100,12 @@ public class Exercicio060 {
         
     }
     
+    public static boolean isFirstTime(int i) {
+        return i == 1;
+    }
+    
+    public static boolean isHerTheFirstWoman(int numberOfWomen) {
+        return numberOfWomen == 0;
+    }   
     
 }

@@ -15,7 +15,7 @@ public class Exercicio067 {
         System.out.print("Digite um valor: ");
         number = keyboard.nextInt();
         System.out.println("-----------------");
-        System.out.print("CONTAGEM: ");
+        System.out.print("Contagem: ");
         
         for(int i = 0; i <= number; i++) {
             System.out.print(i + ", ");

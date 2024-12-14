@@ -14,7 +14,6 @@ public class Exercicio075 {
         }
         
         printArray(array);
-        
     }
     
     public static int fibo(int n) {

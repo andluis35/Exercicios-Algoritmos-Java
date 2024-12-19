@@ -26,16 +26,16 @@ public class Exercicio078 {
     public static void printArray(int[] arrayOfNumbers) {
         System.out.print("[ ");
         
-        for(int value : arrayOfNumbers) {
-            if(isMultipleOfTen(value)) {
-                System.out.print("[" + value + "] | ");
+        for(int i = 0; i < arrayOfNumbers.length; i++) {
+            if(isMultipleOfTen(arrayOfNumbers[i])) {
+                System.out.print("[" + arrayOfNumbers[i] + "] | ");
             }
             else {
-                if(isTheLastElement(value, arrayOfNumbers)) {
-                    System.out.print(value + " ");
+                if(isTheLastElement(i, arrayOfNumbers)) {
+                    System.out.print(arrayOfNumbers[i] + " ");
                 }
                 else {
-                    System.out.print(value + " | ");
+                    System.out.print(arrayOfNumbers[i] + " | ");
                 }  
             }
         }
@@ -47,8 +47,8 @@ public class Exercicio078 {
         return (value % 10) == 0;
     }
     
-    public static boolean isTheLastElement(int value, int[] arrayOfNumbers) {
-        return value == arrayOfNumbers[arrayOfNumbers.length-1];
+    public static boolean isTheLastElement(int i, int[] arrayOfNumbers) {
+        return i == arrayOfNumbers.length - 1;
     }
     
 }

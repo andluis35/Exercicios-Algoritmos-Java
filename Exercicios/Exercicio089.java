@@ -25,8 +25,7 @@ public class Exercicio089 {
                 break;
             default:
                 System.out.println("Tipo de borda inválido. Tente novamente!");
-                return;
-                
+                return;   
         }
         
         System.out.println(border);

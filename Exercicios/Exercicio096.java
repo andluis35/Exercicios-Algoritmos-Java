@@ -26,6 +26,4 @@ public class Exercicio096 {
         return (firstGrade + secondGrade) / 2;
     }
     
-    
-    
 }

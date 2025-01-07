@@ -12,9 +12,11 @@ public class Exercicio099 {
     
     public static int potencia(int base, int expoente) {
         int n = 1;
+        
         for(int i = 1; i <= expoente; i++) {
             n *= base;
         }
+        
         return n;
     }
     
